@@ -1,20 +1,17 @@
 <template>
 
   <!--Header and Navbar Content-->
-  <Header></Header>
+  <Header @sendRoute='showItems' ></Header>
 
   <!--Main Content-->
   <div class="mainContent">
     <!--Project Feed-->
-    <!--
-      <feeds></feeds>
-      <About></About>
-
-    <feeds></feeds>
-    -->
-    <Education></Education>
     
-
+      <feeds v-if="index === 0"></feeds>
+      <About v-if="index === 1"></About>
+      <Education v-if="index === 2"></Education>
+      <Feedback v-if="index === 3"></Feedback>
+    
   </div>
 
   <!--Footer Content-->
@@ -27,6 +24,7 @@ import Feeds from './components/Feeds.vue'
 import Header from './components/Header.vue'
 import About from './components/About.vue'
 import Education from './components/Education.vue'
+import Feedback from './components/Feedback.vue'
 import Footer from './components/Footer.vue'
 
 
@@ -37,7 +35,24 @@ export default {
     Feeds,
     About,
     Education,
+    Feedback,
     Footer
+  },
+  data() {
+    return {
+      items:{
+        feeds:true,
+        about:false,
+        education:false,
+        feedbaacks:false
+      },
+      index:0
+    }
+  },
+  methods:{
+    showItems(index){
+      this.index = index;
+    }
   }
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+
     <div class="aboutContent">
         <div class="aboutText">
             <span class="aboutMenu">
@@ -19,6 +20,41 @@
             </p>
         </div>
     </div>
+    <div class="skills">
+        <h1  style="width: 100%; color: #DE3163;">Skills
+            <svg style="color: black;" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16C14 17.1046 13.1046 18 12 18C10.8954 18 10 17.1046 10 16C10 14.8954 10.8954 14 12 14C13.1046 14 14 14.8954 14 16Z" fill="currentColor" /><path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C14.2091 20 16 18.2091 16 16C16 13.7909 14.2091 12 12 12ZM14 8C14 9.10457 13.1046 10 12 10C10.8954 10 10 9.10457 10 8C10 6.89543 10.8954 6 12 6C13.1046 6 14 6.89543 14 8Z" fill="currentColor" /></svg>
+        </h1>
+        <div class="skillBox">
+
+            <img src="../assets/css.png" alt="" class="skillImage">
+            <img src="../assets/html.png" alt="" class="skillImage" style="width:185px;">
+            <img src="../assets/js.png" alt="" class="skillImage" style="width:120px;">
+            <img src="../assets/python.png" alt="" class="skillImage" style="width:200px;">
+            <img src="../assets/logo.png" alt="" style="width: 130px; height: 130px; margin-top: 50px;">
+
+        </div>
+    </div>
+    <div class="thisWebsite">
+        <div class="skills" style="justify-content: flex-start; padding-left: 40px;">
+            <h1 class="aboutMenu" style="width: 100%;">This Website..
+                <svg style="color:black;" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-braces-asterisk" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5h-1Z"/>
+                </svg>
+            </h1>
+            <p class="aboutMe" style="width:80%">
+                This website is a modern, interactive platform built using HTML,CSS,node js and VueJs. <br> It utilizes HTML for structuring the content, ensuring that the site is accessible and easy to navigate. <br><br> CSS is used to style the website, providing a visually appealing and user-friendly interface. <br>
+
+The site’s interactivity is powered by JavaScript, a versatile language that enables dynamic content updates and enhances user experience. <br><br> The use of Vue.js, a progressive JavaScript framework, further improves the site’s interactivity by allowing for efficient development of user interfaces
+            </p>
+            <div class="box-1">
+                <img src="../assets/css.png" alt="" class="skillImage">
+                <img src="../assets/html.png" alt="" class="skillImage" style="width:185px;">
+                <img src="../assets/js.png" alt="" class="skillImage" style="width:120px;">
+                <img src="https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png" alt="" class="skillImage" style="width: 220px;">
+                <img src="../assets/logo.png" alt="" style="width: 130px; height: 130px; margin-top: 50px;">
+            </div>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -35,14 +71,17 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content:flex-start;
+    gap: 20px;
 }
 
 .aboutContent{
-    width: 630px;
-    padding: 30px;
+    width: 620px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color:  #ECF0F1;
+    border-radius: 10px;
 }
 
 .aboutMenu{
@@ -65,6 +104,46 @@ export default {
     flex-direction: column;
     align-items:flex-start;
 
+}
+
+.skills{
+    width: 630px;
+    background-color:  #ECF0F1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 40px;
+    gap: 30px;
+}
+
+
+.skills h1{
+    display: flex;
+    justify-content:flex-start;
+    gap: 5px;
+    align-items: center;
+}
+
+
+.skillImage{
+    width: 150px;
+}
+
+.skillBox{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.box-1{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
 </style>

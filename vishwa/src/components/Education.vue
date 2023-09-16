@@ -2,7 +2,17 @@
   <div class="EducationMain">
     <div class="Education">
         <div class="eduBox">
+            <div class="pinnedSlot">
+                <div class="pinnedIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-fill" viewBox="0 0 16 16">
+                      <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354z"/>
+                    </svg>
+                </div>
+                <span class="pinnedText">Pinned Cheep</span>
+            </div>
+
             <span class="eduTitle">
+ 
                 <div class="edu-h1">Education</div>
                 <div class="edu-icon" style="color: palevioletred;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
@@ -14,20 +24,35 @@
                 <h3 class="eduBoxTitle">Bachelor of Software Engineering (BSEHons)Undergraduate</h3>
                 <h4 class="institute">The Open University of Sri Lanka</h4>
                 <span class="eduTime">2022 Nov - Present</span>
-                <img src="" alt="" class="instituteImage">
+                
             </div>
 
             <div class="box">
                 <h3 class="eduBoxTitle">G.C.E A/L Examination - Biology Stream</h3>
                 <h4 class="institute">Mahanama Collage - Monaragala</h4>
+                <h5 class="institute" style="color: black;">Chemistry - B<br>Physics - C<br>Biology - C</h5>
                 <span class="eduTime">2017</span>
-                <img src="" alt="" class="instituteImage">
             </div>
         </div>
         <div class="eduBox">
+
+            <div class="pinnedSlot">
+                <div class="pinnedIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-fill" viewBox="0 0 16 16">
+                      <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354z"/>
+                    </svg>
+                </div>
+                <span class="pinnedText">Pinned Cheep</span>
+            </div>
+
             <span class="eduTitle">
                 <span class="edu-h1">Certification</span>
-                <span class="edu-icon"></span>
+                <span class="edu-icon" style="color: palevioletred;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-patch-check" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                      <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"/>
+                    </svg>                    
+                </span>
             </span>
             <div class="box" v-for="(item, index) in certifications" :key="index">
                 <a :href="item.url" target="_blank" style="text-decoration: none; color: black;">
@@ -41,9 +66,6 @@
                 <span class="eduTime">{{ item.year }}</span>
                 <img src="" alt="" class="instituteImage">
             </div>   
-        </div>
-        <div class="eduBox">
-            
         </div>
     </div>
   </div>
@@ -94,23 +116,26 @@ export default {
 }
 
 .Education{
-    width: 630px;
-    padding: 20px;
+    width: 620px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     text-align: left;
+    background-color: #ECF0F1;
+    border-radius: 10px;
 }
 
 .eduBox{
-    width: 90%;
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-color: #ECF0F1;
+    background-color: #e9eaeb;
     border-radius: 10px;
+
 }
 
 

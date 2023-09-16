@@ -89,10 +89,14 @@
                 </span>
             </div>
             <ul class="routBox">
-                <li><a href="" class="routBoxLink">Feed</a></li>
+                <li v-for="(item, index) in routItems" :key="index" >
+                    <a href="" class="routBoxLink " :class="[ {'eactive': indexNum== index}]" @click.prevent="sendRoute(index)">{{ item }}</a>
+                </li>
+                <!--
                 <li><a href="" class="routBoxLink">About</a></li>
                 <li><a href="" class="routBoxLink">Education</a></li>
                 <li><a href="" class="routBoxLink">Feedback</a></li>
+                -->
             </ul>
             </div>
         </div>
@@ -101,6 +105,25 @@
 
 <script>
 export default {
+    data() {
+        return {
+            routItems:[ 'Feed', 'About', 'Education', 'Feedback'],
+            indexNum:0,
+            activColor:''
+        }
+    },
+    methods:{
+        sendRoute(index){
+            this.indexNum = index;
+            this.$emit('sendRoute',index)
+            this.changeActiveColor(index);
+        },
+        changeActiveColor(index){
+            this.activColor = {
+                "border-bottom": 'solid palevioletred 3px'
+            }
+        }
+    }
 
 }
 
@@ -108,6 +131,17 @@ export default {
 </script>
 
 <style>
+
+
+
+.eactive{
+
+    border-bottom: solid palevioletred 3px;
+}
+
+
+
+
 
 
 
@@ -295,7 +329,6 @@ nav{
     color: #566573;
     font-weight: bold;
     font-size: 20px;
-    border-bottom: 3px solid transparent;
 }
 
 </style>
