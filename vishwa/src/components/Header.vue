@@ -21,7 +21,7 @@
             <div class="headerContent">
             <button class="followButton">
                 <span class="followBtnIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                       <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
                     </svg>
                 </span>
@@ -31,7 +31,7 @@
                 <h1 class="ProfileName">Vishwa Prabhath</h1>
                 <h5 class="quate">Brings ideas to life with code!</h5>
                 <p class="JobTitles">
-                    Senior Web Engineer. Creative Developer. Content Creator. Whimsical Specialist. International Speaker. Ex-Google.
+                    Frontend Developer, Undergraduate at Open University of Sri Lanka (Bachelor of Software Engineering (BSEHons))
                 </p>
             </div>
             <ul class="Discription">
@@ -80,12 +80,13 @@
             </ul>
             <div class="ContactByEmail">
                 <div class="emailTitle">Keep up to date with my latest projects and adventures!</div>
-                <div class="emailForm">
-                    <input type="text" class="inputEmail" placeholder="Email Address..">
-                    <input type="submit" class="emailSubmit">
-                </div>
+                
+                <form class="emailForm" target="_blank" action="https://formsubmit.co/vprabhath937@gmail.com" method="POST">
+                     <input class="inputEmail" type="text" name="message" placeholder="your message." required>
+                     <input type="submit" class="emailSubmit" value="submit">
+                </form>
                 <span class="EmailSpam">
-                    *No spam. Unsubscribe any time.
+                    *No spam.
                 </span>
             </div>
             <ul class="routBox">
@@ -109,7 +110,8 @@ export default {
         return {
             routItems:[ 'Feed', 'About', 'Education', 'Feedback'],
             indexNum:0,
-            activColor:''
+            activColor:'',
+            eMailAddress:''
         }
     },
     methods:{
@@ -142,6 +144,11 @@ export default {
 
 
 
+
+
+.quate{
+    font-size: 25px;
+}
 
 
 
@@ -211,9 +218,14 @@ nav{
 }
 
 .followButton:hover{
+    background-color: #DE3163;
     -webkit-box-shadow: 10px 12px 16px -12px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 12px 16px -12px rgba(0,0,0,0.75);
     box-shadow: 10px 12px 16px -12px rgba(0,0,0,0.75);
+}
+
+.emailSubmit:hover{
+    background-color: #DE3163;
 }
 
 
@@ -257,6 +269,7 @@ nav{
 .emailTitle{
     font-size: 20px;
     margin: 20px 0 20px 0;
+    color:black;
 }
 
 .inputEmail{
@@ -286,6 +299,10 @@ nav{
     background-color: palevioletred;
     margin: 10px 0 10px 0;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .emailForm{
@@ -329,6 +346,92 @@ nav{
     color: #566573;
     font-weight: bold;
     font-size: 20px;
+}
+
+
+@media screen and (max-width: 414px) {
+    nav{
+        width: 100vw;
+        position: fixed;
+    }
+
+
+    .headerMainContent,.headerContent{
+        width: 100vw;
+    }
+
+    .coverimg{
+        width: 100vw;
+    }
+
+    .mainText{
+        width: 90%;
+    }
+
+    .profileImage {
+        position: absolute;
+        bottom: -57px;
+        left: 154px;
+    }
+
+    .profileImage {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: solid black 5px;
+    }
+
+    .followButton {
+        height: 39px;
+        right: 17px;
+        top: 7px;
+    }
+
+    .ProfileName{
+        margin: 10px 0 0 0;
+        color: black;
+        font-size: 35px;
+    }
+
+    .quate{
+        font-size: 20px;
+        font-weight: normal;
+        margin: 5px 0 20px 0;
+    }
+
+    .Discription {
+        width: 100%;
+        gap: 4px;
+        flex-wrap: wrap;
+        margin: 6px 0 6px 0;
+        padding-left: 0;
+    }
+
+    .JobTitles{
+        font-size: 20px;
+    }
+
+    .inputEmail{
+        width: 200px;
+    }
+
+    .routBox{
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 95%;
+        font-size: 18px;
+        
+    }
+
+    .routBox li {
+        width: unset;
+    }
+
+    .emailTitle{
+        font-size: 17px;
+    }
+    
+
 }
 
 </style>

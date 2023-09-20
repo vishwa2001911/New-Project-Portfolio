@@ -1,13 +1,13 @@
 <template>
 
   <!--Header and Navbar Content-->
-  <Header @sendRoute='showItems' ></Header>
+  <Header @sendRoute='showItems' > </Header>
 
   <!--Main Content-->
   <div class="mainContent">
     <!--Project Feed-->
     
-      <feeds v-if="index === 0"></feeds>
+      <feeds v-if="index === 0" ></feeds>
       <About v-if="index === 1"></About>
       <Education v-if="index === 2"></Education>
       <Feedback v-if="index === 3"></Feedback>
@@ -65,6 +65,8 @@ body{
   box-sizing: border-box;
   background-color: #F4F6F7 ;
   font-family: 'Courier New', Courier, monospace;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #app {

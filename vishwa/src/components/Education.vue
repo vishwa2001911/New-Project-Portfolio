@@ -184,4 +184,17 @@ export default {
     fill: palevioletred;
 }
 
+@media screen and (max-width:414px) {
+    .eduBox {
+        width: 84%;
+        padding: 20px;
+    }
+
+    .Education {
+        width: 85vw;
+        padding: 13px;
+    }
+}
+
+
 </style>

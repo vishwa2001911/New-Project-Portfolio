@@ -15,17 +15,17 @@
                         </span>
                         <span class="userDate" style="font-size: 13px;">6 Jan 2023</span>
                     </span>
-                    <span>Wanna leave me a message? Fill in this form</span>
+                    <span style="text-align: left;">Wanna leave me a message? Fill in this form</span>
                 </div>
             </div>
             <div class="Form" @submit.prevent="postData()">
-                <form action="">
+                <form action="" class="form">
                 <h3 class="GestBookFormTitle" style="font-size: 20px;">
                     Guest Book Form
 
                 </h3>
                 <span class="formInstructions" >Fill in this form and I'll get your guestbook entry added.</span>
-                <input type="text" placeholder="Name" required v-model="message.name">
+                <input type="text" placeholder="First Name" required v-model="message.name">
                 <input type="text" placeholder="Phone Number" required v-model="message.phone">
                 <input type="text" placeholder="Your URL (site, etc.)" required v-model="message.url">
                 <input type="text" placeholder="Organisation" required v-model="message.organization">
@@ -45,7 +45,7 @@
                 <div class="feedProfileBox">
                     <span style="display: flex; align-items: center;">
                         <span class="user">{{ item.name }}</span>
-                        <span style="margin-right: 10px; color: #02BAFF ;">
+                        <span style="margin-right: 5px; color: #02BAFF ;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
                               <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
                             </svg>
@@ -90,7 +90,7 @@ export default {
                 message:'',
                 date:''
             },
-            serverUrl:'http://127.0.0.1:3000/',
+            serverUrl:'https://node-portfolio-ifko.onrender.com/',
             serverData:[],
         }
     },
@@ -158,7 +158,7 @@ export default {
 
             console.log(phone)
             try {
-                const response = await axios.delete("http://127.0.0.1:3000/", { data:{"phone":phone}, headers: { "Authorization": "***" } });
+                const response = await axios.delete("https://node-portfolio-ifko.onrender.com/", { data:{"phone":phone}, headers: { "Authorization": "***" } });
                 const res = await response.data;
                 console.log(res);
                 
@@ -226,7 +226,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
+    gap: 5px;
     margin-left: 10px;
     
 }
@@ -238,7 +238,7 @@ export default {
     align-items: center;
 }
 
-form{
+.form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -252,13 +252,13 @@ form{
     transition: 0.4s;
 }
 
-form:hover{
+.form:hover{
     -webkit-box-shadow: 2px 3px 5px -2px rgba(123,125,125,1);
     -moz-box-shadow: 2px 3px 5px -2px rgba(123,125,125,1);
     box-shadow: 2px 3px 5px -2px rgba(123,125,125,1);
 }
 
-form input, textarea{
+.form input, textarea{
     height: 30px;
     padding: 5px 0 5px 20px;
     font-size: 17px;
@@ -310,6 +310,28 @@ form input, textarea{
     color: #02BAFF ;
 }
 
+
+@media screen and (max-width: 414px) {
+    .Feedback {
+        width: 85vw;
+        padding: 13px;
+    }
+
+    .form{
+        width: 85%;
+    }
+
+    .form h3{
+        margin: 0;
+    }
+
+    .user {
+        font-size: 15px;
+        margin-right: 6px;
+        text-align: left;
+        max-width: 128px;
+    }
+}
 
 
 

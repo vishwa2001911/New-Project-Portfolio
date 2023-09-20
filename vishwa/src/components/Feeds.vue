@@ -1,11 +1,11 @@
 <template>
   <div class="feeds">
     
-  <!----> 
-  
   <!---->
+  <!----> 
 
-  <div class="feedBox">
+
+  <div class="feedBox" v-for="(item, index) in feed" :key="index">
     <div class="pinnedSlot">
         <div class="pinnedIcon">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-fill" viewBox="0 0 16 16">
@@ -28,12 +28,12 @@
                               <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
                             </svg>
                         </span>
-                        <span class="userDate" style="font-size: 13px;">6 Jan 2023</span>
+                        <span class="userDate" style="font-size: 13px;">{{ item.date }}</span>
                     </span>
                     <span class="box-2">
                         
-                        <span>
-                            Feeling
+                        <span style="font-style: italic; font-size: 15px; color: #DE3163; font-weight: bold;">
+                            {{ item.feeling }}
                         </span>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cup-hot-fill" viewBox="0 0 16 16">
@@ -47,23 +47,22 @@
             </div>
 
         <!---->
-
             <div class="feedMainTextBox">
-        <h1 class="feedTitle">Hello World</h1>
+        <h1 class="feedTitle">{{ item.title }}</h1>
         <p class="feedText">
-            This is my site where I try and post about what I'm up to and how to do things with code. You can follow along with RSS by hitting the "Follow" button up above. Or if you're only interested in stuff I wrote about, check out /writing.
+            {{ item.feedMessage }}
         </p>
     </div>
-    <img src="https://jhey.dev/media/image/enhanced/202301gde-dinner-750x500.avif" alt="" class="feedImage">
+    <img :src="item.imageUrl" alt="" class="feedImage">
     <div class="reactBox">
-        <span class="permalink">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+        <a class="permalink" :href="item.url" target="_blank" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
               <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
               <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
             </svg>
-        </span>
+        </a>
         <span class="react">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" @click="reactClicked(index)" :class="{clicked : item.react}"  width="20" height="20" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
             </svg>
         </span>
@@ -72,19 +71,51 @@
     </div>
     
   </div>
-
-
+  
+  <!---->
   <!---->
   </div>
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+            feed:[{
+                title:"Hello World!",
+                feeling:"Excited",
+                date:"10 Jan 2023",
+                feedMessage:"Welcome to my website, where I invite you to explore my creative world. Here, you'll find a curated collection of passion projects that offer a unique glimpse into my creative journey. These creations reflect my dedication and enthusiasm, and I'm excited to share them with you. Take a moment to browse through my work, and let's embark on this exciting journey together. Thank you for visiting, and I hope you find something that piques your curiosity and interest",
+                imageUrl:"https://images.pexels.com/photos/3401403/pexels-photo-3401403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                url:"https://github.com/vishwa2001911",
+                react:true
+                },{
+                title:"Gindara Cafe",
+                feeling:"Excited",
+                date:"16 Feb 2023",
+                feedMessage:"Welcome to my website, where I invite you to explore my creative world. Here, you'll find a curated collection of passion projects that offer a unique glimpse into my creative journey. These creations reflect my dedication and enthusiasm, and I'm excited to share them with you. Take a moment to browse through my work, and let's embark on this exciting journey together. Thank you for visiting, and I hope you find something that piques your curiosity and interest",
+                imageUrl:"../assets/gindara.png",
+                url:"https://github.com/vishwa2001911/KOTTU_File",
+                react:true
+                },
+            ],
+        }
+    },
+    methods: {
+        reactClicked(index){
+            this.feed[index].react = !this.feed[index].react
+        }
+    },
 
 }
 </script>
 
 <style>
+
+
+.clicked{
+    fill: #DE3163;
+}
 
 .feeds{
     display: flex;
@@ -196,7 +227,26 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+}
+
+@media screen and (max-width: 414px) {
+
+    .feedBox{
+        width: 90vw;
+        padding: 10px;
+    }
+    .feedText{
+        width: 90%;
+    }
+    .feedImage {
+        width: 90%;
+    }
+    .feedMainTextBox{
+        width: 100%;
+    }
+
+
 }
 
 </style>
