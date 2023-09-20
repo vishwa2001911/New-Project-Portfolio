@@ -88,15 +88,24 @@ export default {
                 feedMessage:"Welcome to my website, where I invite you to explore my creative world. Here, you'll find a curated collection of passion projects that offer a unique glimpse into my creative journey. These creations reflect my dedication and enthusiasm, and I'm excited to share them with you. Take a moment to browse through my work, and let's embark on this exciting journey together. Thank you for visiting, and I hope you find something that piques your curiosity and interest",
                 imageUrl:"https://images.pexels.com/photos/3401403/pexels-photo-3401403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                 url:"https://github.com/vishwa2001911",
-                react:true
+                react:false
                 },{
                 title:"Gindara Cafe",
                 feeling:"Excited",
                 date:"16 Feb 2023",
-                feedMessage:"Welcome to my website, where I invite you to explore my creative world. Here, you'll find a curated collection of passion projects that offer a unique glimpse into my creative journey. These creations reflect my dedication and enthusiasm, and I'm excited to share them with you. Take a moment to browse through my work, and let's embark on this exciting journey together. Thank you for visiting, and I hope you find something that piques your curiosity and interest",
-                imageUrl:"../assets/gindara.png",
+                feedMessage:"Kottu is built with Vue.js, HTML, CSS, JavaScript and Firebase. Vue.js is a progressive framework for building user interfaces. HTML, CSS and JavaScript are the core technologies of the web. Firebase is a platform that provides backend services such as storage and hosting.",
+                imageUrl:"https://raw.githubusercontent.com/vishwa2001911/New-Project-Portfolio/master/vishwa/src/assets/gindara.PNG?token=GHSAT0AAAAAACHVVGFGUB4S2DBC4QIJLLIIZIKQFNA",
                 url:"https://github.com/vishwa2001911/KOTTU_File",
-                react:true
+                react:false
+                },
+                {
+                title:"Gindara Cafe",
+                feeling:"Excited",
+                date:"16 Feb 2023",
+                feedMessage:"Kottu is built with Vue.js, HTML, CSS, JavaScript and Firebase. Vue.js is a progressive framework for building user interfaces. HTML, CSS and JavaScript are the core technologies of the web. Firebase is a platform that provides backend services such as storage and hosting.",
+                imageUrl:"https://raw.githubusercontent.com/vishwa2001911/New-Project-Portfolio/master/vishwa/src/assets/gindara.PNG?token=GHSAT0AAAAAACHVVGFGUB4S2DBC4QIJLLIIZIKQFNA",
+                url:"https://github.com/vishwa2001911/KOTTU_File",
+                react:false
                 },
             ],
         }
