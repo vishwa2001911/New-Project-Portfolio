@@ -41,11 +41,7 @@
             <p class="aboutMe">
                 I am an undergraduate software developer at the Open University of Sri Lanka, where I am pursuing a Bachelor of Software Engineering degree. <br><br> I have a passion for creating innovative and user-friendly applications that solve real-world problems. I have experience in programming languages, such as JavaScript ,Python. <br> I am always eager to learn new skills and technologies, and I enjoy collaborating with other developers and clients. <br><br> My goal is to become a proficient and professional software engineer who can contribute to the advancement of the software industry in Sri Lanka and beyond. <br><br>
                 If you are likes My work reach out and say "Hey!". I look forward to hearing from you!
-
-                <br><br><br>
-                Stay awesome!
                 <br>
-                Vishwa Prabhath Jayasinghe.
             </p>
         </div>
     </div>
@@ -123,11 +119,15 @@
 
 
             <p class="aboutMe" style="">
-                This website is a modern, interactive platform built using HTML,CSS,node js and VueJs. <br> It utilizes HTML for structuring the content, ensuring that the site is accessible and easy to navigate. <br><br> CSS is used to style the website, providing a visually appealing and user-friendly interface. <br>
-
-The site’s interactivity is powered by JavaScript, a versatile language that enables dynamic content updates and enhances user experience. <br><br> The use of Vue.js, a progressive JavaScript framework, further improves the site’s interactivity by allowing for efficient development of user interfaces
+                Discover my world of creativity and innovation through my personal portfolio website. I've brought together the power of HTML, CSS, Node.js, and Vue.js to create a dynamic and visually appealing platform that showcases my skills, projects, and passion for web development. <br><br>
+                Explore a collection of my finest projects, each crafted with attention to detail and designed to solve real-world problems. Dive into my background in the this section to learn more about my journey, skills, and aspirations. Whether you're a potential employer, collaborator, or simply someone interested in my work, this website serves as a window into my expertise and a gateway to connect with me. <br><br>
+                Join me on this digital journey and get inspired by the possibilities of web development. Welcome to my world of innovation and creativity!
+                <br><br>
+                Yours faithfully, 
+                <br>
+                Vishwa Prabhath.
             </p>
-            <div class="box-1">
+            <div class="box-1 box-1x">
                 <img src="../assets/css.png" alt="" class="skillImage">
                 <img src="../assets/html.png" alt="" class="skillImage" style="width:185px;">
                 <img src="../assets/js.png" alt="" class="skillImage" style="width:120px;">
@@ -202,7 +202,7 @@ export default {
     background-color:  #ECF0F1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     border-radius: 10px;
     padding: 40px;
     gap: 30px;
@@ -267,6 +267,9 @@ export default {
 
     .box-1{
         gap: unset;
+    }
+    .box-1x{
+        display: none;
     }
 
 }

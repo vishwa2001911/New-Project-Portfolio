@@ -1,10 +1,10 @@
-<template>
+<template >
 
   <!--Header and Navbar Content-->
-  <Header @sendRoute='showItems' > </Header>
+  <Header @sendRoute='showItems' :mode="mode"  @changeMode="changeMode"  > </Header>
 
   <!--Main Content-->
-  <div class="mainContent">
+  <div class="mainContent"> 
     <!--Project Feed-->
     
       <feeds v-if="index === 0" ></feeds>
@@ -46,13 +46,30 @@ export default {
         education:false,
         feedbaacks:false
       },
-      index:0
+      index:0,
+      mode:{
+        textColor:'#2c3e50',
+        bgColor:'#F4F6F7',
+        feedBoxColor:'#ECF0F1',
+        iconColor:'',
+        buttonColor:'palevioletred',
+        buttonColorHover:'palevioletred'
+      }
     }
   },
   methods:{
     showItems(index){
       this.index = index;
+    },
+    changeMode(){
+      // this will chang colors of the buttons
+      let color = {'palevioletred':'#51B0EE','#51B0EE':'palevioletred'}
+
+      this.mode.buttonColor = color[this.mode.buttonColor]
+
+      
     }
+    
   }
 }
 </script>
@@ -63,7 +80,7 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #F4F6F7 ;
+  
   font-family: 'Courier New', Courier, monospace;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -75,6 +92,8 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #F4F6F7 ;
+  overflow: hidden;
 }
 
 

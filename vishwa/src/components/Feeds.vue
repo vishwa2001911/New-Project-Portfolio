@@ -90,32 +90,57 @@ export default {
                 url:"https://github.com/vishwa2001911",
                 react:false
                 },{
-                title:"Gindara Cafe",
+                title:"Gindara Cafe Website",
                 feeling:"Excited",
                 date:"16 Feb 2023",
                 feedMessage:"Kottu is built with Vue.js, HTML, CSS, JavaScript and Firebase. Vue.js is a progressive framework for building user interfaces. HTML, CSS and JavaScript are the core technologies of the web. Firebase is a platform that provides backend services such as storage and hosting.",
-                imageUrl:"https://raw.githubusercontent.com/vishwa2001911/New-Project-Portfolio/master/vishwa/src/assets/gindara.PNG?token=GHSAT0AAAAAACHVVGFGUB4S2DBC4QIJLLIIZIKQFNA",
+                imageUrl:"https://raw.githubusercontent.com/vishwa2001911/Project_/master/img/Capture.PNG",
                 url:"https://github.com/vishwa2001911/KOTTU_File",
                 react:false
                 },
                 {
-                title:"Gindara Cafe",
+                title:"NEO E-Commerce Website with Vue",
                 feeling:"Excited",
-                date:"16 Feb 2023",
-                feedMessage:"Kottu is built with Vue.js, HTML, CSS, JavaScript and Firebase. Vue.js is a progressive framework for building user interfaces. HTML, CSS and JavaScript are the core technologies of the web. Firebase is a platform that provides backend services such as storage and hosting.",
-                imageUrl:"https://raw.githubusercontent.com/vishwa2001911/New-Project-Portfolio/master/vishwa/src/assets/gindara.PNG?token=GHSAT0AAAAAACHVVGFGUB4S2DBC4QIJLLIIZIKQFNA",
-                url:"https://github.com/vishwa2001911/KOTTU_File",
+                date:"16 March 2023",
+                feedMessage:"This Project is a fully functional E-Commerce website, created using Vue & HTML, along with some additional JavaScript.",
+                imageUrl:'https://raw.githubusercontent.com/vishwa2001911/Project_/master/img/neo_store.PNG',
+                url:'https://github.com/vishwa2001911/Neo',
                 react:false
                 },
+                {
+                title:"ChillZone",
+                feeling:"Excited",
+                date:"16 Apr 2023",
+                feedMessage:"This project is a clone of the IMDb website. It uses the TMDb API to fetch movie data and display it on the website. The website is built using Vue.js, HTML, CSS, Bootstrap, and JavaScript.",
+                imageUrl:'https://github.com/vishwa2001911/Project_/blob/master/img/ChillZone.PNG?raw=true',
+                url:'https://github.com/vishwa2001911/ChillZone',
+                react:false
+                },{
+                title:"Web Scraping using Python",
+                feeling:"Excited",
+                date:"7 Nov 2022",
+                feedMessage:"Mini Project:-Python Web Scraping Using BeautifulSoup for Get Download Links from Drama Cool Website",
+                imageUrl:'https://github.com/vishwa2001911/Project_/blob/master/img/Dramacool.PNG?raw=true',
+                url:'https://github.com/vishwa2001911/web-scraping_DramaCool',
+                react:false
+                },{
+                title:"Portfolio",
+                feeling:"Feelin' Fresh",
+                date:"10 Sep 2023",
+                feedMessage:"Welcome to my portfolio project! This is a web-based portfolio I've created to showcase my work and skills using HTML, CSS, Node.js, and Vue.js.",
+                imageUrl:'https://github.com/vishwa2001911/Project_/blob/master/img/portfolio.PNG?raw=true',
+                url:'https://github.com/vishwa2001911/New-Project-Portfolio',
+                react:false
+                }
             ],
+            oldFeed:[]
         }
     },
     methods: {
         reactClicked(index){
             this.feed[index].react = !this.feed[index].react
         }
-    },
-
+    }
 }
 </script>
 

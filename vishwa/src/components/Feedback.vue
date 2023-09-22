@@ -31,7 +31,7 @@
                 <input type="text" placeholder="Organisation" required v-model="message.organization">
                 <input type="text" placeholder="Your Avatar URL" required v-model="message.avatarUrl">
                 <textarea name="" id="" cols="30" rows="3" placeholder="Your message" style="height: 50px;" v-model="message.message"></textarea>
-                <input type="submit" placeholder="Submit" class="formSubmit">
+                <input type="submit" placeholder="Submit" class="formSubmit" style="color: aliceblue;">
             </form>
             </div>
         </div>
