@@ -136,6 +136,7 @@ export default {
                             reply_to: "vprabhath937@gmail.com",
                             });
                 alert("You are Connected!")
+                this.eMailAddress = ""
             } catch (error) {
                 console.log(error);
             }

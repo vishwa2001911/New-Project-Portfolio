@@ -79,6 +79,7 @@ import axios, { Axios } from 'axios'
 
 
 export default {
+    props:['mode'],
     data() {
         return {
             message:{
@@ -119,6 +120,8 @@ export default {
             } catch (error) {
                 console.log(error)
             }
+        },validation(){
+            if(this.message.)
         },
         resetForm(){
             this.message = {
@@ -273,6 +276,11 @@ export default {
     color: whitesmoke;
     font-weight: bolder;
     cursor: pointer;
+    transition: 0.4s;
+}
+
+.formSubmit:hover{
+    background-color:#DE3163;
 }
 
 .feedbackPostUrl{

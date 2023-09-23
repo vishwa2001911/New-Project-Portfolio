@@ -10,7 +10,7 @@
       <feeds v-if="index === 0" ></feeds>
       <About v-if="index === 1"></About>
       <Education v-if="index === 2"></Education>
-      <Feedback v-if="index === 3"></Feedback>
+      <Feedback :mode="mode" v-if="index === 3"></Feedback>
     
   </div>
 

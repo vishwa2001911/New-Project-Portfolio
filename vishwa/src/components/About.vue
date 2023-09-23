@@ -81,7 +81,7 @@
             <img src="../assets/html.png" alt="" class="skillImage" style="width:185px;">
             <img src="../assets/js.png" alt="" class="skillImage" style="width:120px;">
             <img src="../assets/python.png" alt="" class="skillImage" style="width:200px;">
-            <img src="../assets/logo.png" alt="" style="width: 130px; height: 130px; margin-top: 50px;">
+            <img src="../assets/vue.png" alt="" style="width: 130px; height: 110px; margin-top: 50px;">
 
         </div>
     </div>
@@ -132,7 +132,7 @@
                 <img src="../assets/html.png" alt="" class="skillImage" style="width:185px;">
                 <img src="../assets/js.png" alt="" class="skillImage" style="width:120px;">
                 <img src="https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png" alt="" class="skillImage" style="width: 220px;">
-                <img src="../assets/logo.png" alt="" style="width: 130px; height: 130px; margin-top: 50px;">
+                <img src="../assets/vue.png" alt="" style="width: 130px; height: 110px; margin-top: 50px;">
             </div>
         </div>
     </div>
